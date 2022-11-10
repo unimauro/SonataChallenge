@@ -6,7 +6,8 @@ application up and running.
 Things you may want to cover:
 
 * Used:
-## HAML https://haml.info/
+### HAML https://haml.info/
+### Simple Form https://github.com/heartcombo/simple_form
 
 * Ruby version
 

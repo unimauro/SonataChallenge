@@ -5,6 +5,9 @@ application up and running.
 
 Things you may want to cover:
 
+* Used:
+## HAML https://haml.info/
+
 * Ruby version
 
 * System dependencies
@@ -20,5 +23,3 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
-* ...

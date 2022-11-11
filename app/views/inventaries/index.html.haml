@@ -1,0 +1,25 @@
+%h1 Listing inventaries
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Car
+      %th Dealer
+      %th
+      %th
+      %th
+
+  %tbody
+    - @inventaries.each do |inventary|
+      %tr
+        %td= inventary.name
+        %td= inventary.car
+        %td= inventary.dealer
+        %td= link_to 'Show', inventary
+        %td= link_to 'Edit', edit_inventary_path(inventary)
+        %td= link_to 'Destroy', inventary, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Inventary', new_inventary_path

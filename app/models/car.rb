@@ -1,12 +1,9 @@
-# == Schema Information
-#
-# Table name: cars
-#
-#  id          :bigint           not null, primary key
-#  name        :string
-#  description :text
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
-#
 class Car < ApplicationRecord
+  belongs_to :dealership
+  belongs_to :carstatus
+
+  validates :model, presence: true
+  validates :year, presence: true, numericality: { only_integer: true }
+  validates :site, presence: true, numericality: { only_integer: true }
+
 end

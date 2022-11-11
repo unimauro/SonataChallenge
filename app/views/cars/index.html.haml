@@ -1,10 +1,13 @@
 %h1 Listing cars
 
-%table
-  %thead
+%table.table.table-striped.table-bordered.table-hover
+  %thead.thead-dark
     %tr
-      %th Name
-      %th Description
+      %th Model
+      %th Year
+      %th Site
+      %th Dealership
+      %th Carstatus
       %th
       %th
       %th
@@ -12,12 +15,15 @@
   %tbody
     - @cars.each do |car|
       %tr
-        %td= car.name
-        %td= car.description
+        %td= car.model
+        %td= car.year
+        %td= car.site
+        %td= car.dealership.name
+        %td= car.carstatus.name
         %td= link_to 'Show', car
         %td= link_to 'Edit', edit_car_path(car)
         %td= link_to 'Destroy', car, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
-= link_to 'New Car', new_car_path
+= link_to 'New Car', new_car_path, class:"btn btn-secondary"

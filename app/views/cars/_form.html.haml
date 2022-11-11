@@ -4,8 +4,18 @@
   = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
 
   .form-inputs
-    = f.input :name
-    = f.input :description
-
+    = f.input :model
+    = f.input :year
+    = f.input :site
+    %br
+    =t('.Dealership')
+    %br
+    = f.collection_select(:dealership_id, Dealership.all, :id, :name, include_blank: false) 
+    %br
+    =t('.Carstatus')
+    %br
+    = f.collection_select(:carstatus_id, Carstatus.all, :id, :name, include_blank: false)
+    %br
   .form-actions
-    = f.button :submit
+    = f.button :submit, :class =>"btn btn-secondary"
+    %br
